@@ -14,6 +14,9 @@ def self.old_news
   where("created_at <?", Time.zone.today.beginning_of_day)
 end
 
+def self.by_author(author_id)
+  where(author: author_id)
+end
   private
 
   def is_title_case
